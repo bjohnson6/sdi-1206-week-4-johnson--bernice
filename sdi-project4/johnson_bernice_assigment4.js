@@ -12,12 +12,22 @@ var myLibrary = function(){
       var phoneNumPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;  //the regEx code
         return phoneNumPattern.test(number); //returns true
 
-   };   //need to add if else statement????
+   };   
    
     //validatePhoneNum(6102865545); //number I used to verify number//returned true //call function
 
     //validatePhoneNum(100000000000); // number I used to verify number//returned false
-    //finshed 1#  
+    //finshed 1# ///////////////////////////////////////////////////////////////
+
+    //#2 Does a string follow an aaa@bbb.ccc pattern like an email address?
+    var validateEmailAddress = function (email){ //validate the email address
+    	var emailAddressPattern = ^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)\b;
+    	return emailAddressPattern.test(email);
+
+    //NEED TO WORK ON THIS MORE
+
+
+    };
 
 
 
@@ -27,6 +37,7 @@ var myLibrary = function(){
 //RETURN FUNCTION WRAPPER
     return {
     	"validatePhoneNum":validatePhoneNum, //1# return
+    	"validateEmailAddress":validateEmailAddress,
 
     	
     };
@@ -37,7 +48,8 @@ var myLibrary = function(){
 var newLib = new myLibrary();
 
 //console.log(newLib.checkNum(15)); // WIMBA DEMONSTRATION FOR REFERENCE
-console.log(newLib.validatePhoneNum(6102865545)); //returns true
+console.log(newLib.validatePhoneNum(6102865545)); // NUMBER I USED TO VERIFY..returns true
+console.log(newLib.validateEmailAddress(bernicejohnson@fullsail.edu)); //EMAIL ADDRESS I USED TO VERIFY..
 
 
 
