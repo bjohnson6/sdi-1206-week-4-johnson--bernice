@@ -54,7 +54,7 @@ var myLibrary = function(){
        //validateUrl("www.google.com"); //false
       //validateUrl("p//nothing.com"); //false
 
-//Still working on this one///////getting an error that says on my if conditional
+//Finshed 3# /////////////////////////////////////////////////////////////
 
 
     //4# Given a string version of a number such as "42", return the value as an actual number, such as 42.
@@ -63,6 +63,8 @@ var myLibrary = function(){
     	return actualNumber; //RETURNS THE NUMBER 42
     };
    
+ //Finished 4# //////////////////////////////////////////////////////////   
+
     //5# Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
     var forMatNum = function(num){ //FUNCTION WITH NUMBER ARGUMENT
     	var number = num
@@ -71,18 +73,31 @@ var myLibrary = function(){
     	return nums; //returns 2.10
 
     };
-
-
-
-
+//Finished 5# /////////////////////////////////////////////////////////
 
     
-    //?# Title case a string 
-    //var toUpperCases = function (str){
-    	
+    //6# Title case a string 
+    var toUpperCases = function(str){ //function and string argument
+		str = str.toLowerCase().replace(/([-\.']) */g,'$1 '); // str.toLowerCase converts a string to lower case letters
+		var regExPattern = /\b([a-z'-\.]+)\b/ig; //RegEx Pattern
+		str = str.replace(regExPattern,function(w){ //see below str.replace 
+		return w.charAt(0).toUpperCase()+w.substring(1); //The charAt() method returns the character at the specified index in a string.
+		});
+		return str.replace(/^ *|(\-|') *| *$/g,'$1'); //see below str.replace
+	};
+        //toUpperCases("bernice johnson"); returns Bernice Johnson
 
-    //};
+//The replace() method searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.
+//The toUpperCase() method converts a string to uppercase letters.
+//The substring() method extracts the characters from a string, between two specified indices, and returns the new sub string.
+
   
+
+
+
+
+
+
 
 
 
@@ -96,6 +111,7 @@ var myLibrary = function(){
     	"validateUrl":validateUrl, //3# return
     	"changeToNumber":changeToNumber,
     	"forMatNum":forMatNum,
+    	"toUpperCases":toUpperCases,
 
     	
     };
@@ -111,6 +127,7 @@ console.log(newLib.validateEmailAddress("bernicejohnson@fullsail.edu")); //EMAIL
 console.log(newLib.validateUrl("http://fullsail.com")); //EMAIL TO VERIFY HTTP URL PART..
 console.log(newLib.changeToNumber("42")); //STRING NUMBER CONVERTED TO NUMBER..
 console.log(newLib.forMatNum(2.1)); //NUMBER USED TO CHANGE ITO A DECIMAL 2 PLACES 2.10
+console.log(newLib.toUpperCases("bernice johnson")); //STRING NAME USED..RETURNS Bernice Johnson
 
 
 
