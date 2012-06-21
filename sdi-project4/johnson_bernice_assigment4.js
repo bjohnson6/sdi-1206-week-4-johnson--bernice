@@ -38,12 +38,20 @@ var myLibrary = function(){
 //FINISHED 2# /////////////////////////////////////////////////////////////
     
     //3# Is the string a URL? (Does it start with http: or https:?)
-    var validateUrl = function (startWith){
-    	
-      
+    var validateUrl = function (url){  //Function and string argument..validate url
+    	var urlPattern = ("^(http|https://"); // the url regEx code
+    	    if(urlPattern.test(url) === false) { 
+	        console.log("Not valid"); ////this message shows up if the url is invalid. false.
+	        return false;
+	    }else{
+	    	console.log("Valid."); // this message shows up if the url is valid http or https. true
+	    	return true;
 
-    }
+	    }
+    //}
 
+    };
+//Still working on this one///////getting an error that says on my if conditional
   
 
 
@@ -55,6 +63,7 @@ var myLibrary = function(){
     return {
     	"validatePhoneNum":validatePhoneNum, //1# return
     	"validateEmailAddress":validateEmailAddress, //2# return
+    	"validateUrl":validateUrl, //3# return
 
     	
     };
@@ -67,6 +76,7 @@ var newLib = new myLibrary();
 //console.log(newLib.checkNum(15)); // WIMBA DEMONSTRATION FOR REFERENCE
 console.log(newLib.validatePhoneNum(6102865545)); // NUMBER I USED TO VERIFY..returns true
 console.log(newLib.validateEmailAddress("bernicejohnson@fullsail.edu")); //EMAIL ADDRESS I USED TO VERIFY..
+console.log(newLib.validateUrl("http://fullsail.com")); //EMAIL TO VERIFY HTTP URL PART..
 
 
 
