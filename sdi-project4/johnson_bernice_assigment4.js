@@ -38,20 +38,47 @@ var myLibrary = function(){
 //FINISHED 2# /////////////////////////////////////////////////////////////
     
     //3# Is the string a URL? (Does it start with http: or https:?)
-    var validateUrl = function (url){  //Function and string argument..validate url
-    	var urlPattern = ("^(http|https://"); // the url regEx code
-    	    if(urlPattern.test(url) === false) { 
-	        console.log("Not valid"); ////this message shows up if the url is invalid. false.
-	        return false;
-	    }else{
-	    	console.log("Valid."); // this message shows up if the url is valid http or https. true
-	    	return true;
+//    var validateUrl = function (url){  //Function and string argument..validate url
+ //   	var urlPattern = ("^(http|https://"); // the url regEx code
+ //   	    if(urlPattern.test(url) === false) { 
+//	        console.log("Not valid"); ////this message shows up if the url is invalid. false.
+//	        return false;
+//	    }else{
+//	    	console.log("Valid."); // this message shows up if the url is valid http or https. true
+//	    	return true;
 
-	    }
+//	    }
     //}
 
-    };
+//    };
 //Still working on this one///////getting an error that says on my if conditional
+
+
+    //4# Given a string version of a number such as "42", return the value as an actual number, such as 42.
+    var changeToNumber = function(stringNum){ //FUNTION AND STRING ARGUMENT
+    	var actualNumber = parseFloat(stringNum); //parseFloat function parses a string and returns a floating point number.
+    	return actualNumber; //RETURNS THE NUMBER 42
+    };
+   
+    //5# Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
+    var forMatNum = function(num){ //FUNCTION WITH NUMBER ARGUMENT
+    	var number = num
+    	var nums = number.toFixed(2); //toFixed converts a number into a string, keeping only 2 decimals.
+    	console.log("I have $" + number.toFixed(2) + " left."); //message says, I have $2.10 left.
+    	return nums; //returns 2.10
+
+    };
+
+
+
+
+
+    
+    //?# Title case a string 
+    var toUpperCases = function (str){
+    	
+
+    };
   
 
 
@@ -63,7 +90,9 @@ var myLibrary = function(){
     return {
     	"validatePhoneNum":validatePhoneNum, //1# return
     	"validateEmailAddress":validateEmailAddress, //2# return
-    	"validateUrl":validateUrl, //3# return
+  //  	"validateUrl":validateUrl, //3# return
+    	"changeToNumber":changeToNumber,
+    	"forMatNum":forMatNum,
 
     	
     };
@@ -76,8 +105,10 @@ var newLib = new myLibrary();
 //console.log(newLib.checkNum(15)); // WIMBA DEMONSTRATION FOR REFERENCE
 console.log(newLib.validatePhoneNum(6102865545)); // NUMBER I USED TO VERIFY..returns true
 console.log(newLib.validateEmailAddress("bernicejohnson@fullsail.edu")); //EMAIL ADDRESS I USED TO VERIFY..
-console.log(newLib.validateUrl("http://fullsail.com")); //EMAIL TO VERIFY HTTP URL PART..
-console.log(newLib.validateUrl("https://httpsnow.org")); //EMAIL TO VERIFY THE HTTPS PART..
+//console.log(newLib.validateUrl("http://fullsail.com")); //EMAIL TO VERIFY HTTP URL PART..
+//console.log(newLib.validateUrl("https://httpsnow.org")); //EMAIL TO VERIFY THE HTTPS PART..
+console.log(newLib.changeToNumber("42")); //STRING NUMBER CONVERTED TO NUMBER..
+console.log(newLib.forMatNum(2.1)); //NUMBER USED TO CHANGE ITO A DECIMAL 2 PLACES 2.10
 
 
 
