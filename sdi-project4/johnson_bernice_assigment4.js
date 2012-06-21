@@ -38,19 +38,22 @@ var myLibrary = function(){
 //FINISHED 2# /////////////////////////////////////////////////////////////
     
     //3# Is the string a URL? (Does it start with http: or https:?)
-//    var validateUrl = function (url){  //Function and string argument..validate url
- //   	var urlPattern = ("^(http|https://"); // the url regEx code
- //   	    if(urlPattern.test(url) === false) { 
-//	        console.log("Not valid"); ////this message shows up if the url is invalid. false.
-//	        return false;
-//	    }else{
-//	    	console.log("Valid."); // this message shows up if the url is valid http or https. true
-//	    	return true;
+    var validateUrl = function (url){  //Function and string argument..validate url
+        var urlPattern =  /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/; //the url regEx code
+    	    if(urlPattern.test(url) === false) { 
+            console.log("Your url is not a match."); ////this message shows up if the url is invalid. false.
+	        return false;
+        }else{
+	    	console.log("Your url is a match."); // this message shows up if the url is valid http or https. true
+	    	return true;
+        }
+	   
+    };
+         //validateUrl("http://fullsail.com"); //true
+        //validateUrl("https://httpsnow.org"); //true
+       //validateUrl("www.google.com"); //false
+      //validateUrl("p//nothing.com"); //false
 
-//	    }
-    //}
-
-//    };
 //Still working on this one///////getting an error that says on my if conditional
 
 
@@ -75,10 +78,10 @@ var myLibrary = function(){
 
     
     //?# Title case a string 
-    var toUpperCases = function (str){
+    //var toUpperCases = function (str){
     	
 
-    };
+    //};
   
 
 
@@ -90,7 +93,7 @@ var myLibrary = function(){
     return {
     	"validatePhoneNum":validatePhoneNum, //1# return
     	"validateEmailAddress":validateEmailAddress, //2# return
-  //  	"validateUrl":validateUrl, //3# return
+    	"validateUrl":validateUrl, //3# return
     	"changeToNumber":changeToNumber,
     	"forMatNum":forMatNum,
 
@@ -105,8 +108,7 @@ var newLib = new myLibrary();
 //console.log(newLib.checkNum(15)); // WIMBA DEMONSTRATION FOR REFERENCE
 console.log(newLib.validatePhoneNum(6102865545)); // NUMBER I USED TO VERIFY..returns true
 console.log(newLib.validateEmailAddress("bernicejohnson@fullsail.edu")); //EMAIL ADDRESS I USED TO VERIFY..
-//console.log(newLib.validateUrl("http://fullsail.com")); //EMAIL TO VERIFY HTTP URL PART..
-//console.log(newLib.validateUrl("https://httpsnow.org")); //EMAIL TO VERIFY THE HTTPS PART..
+console.log(newLib.validateUrl("http://fullsail.com")); //EMAIL TO VERIFY HTTP URL PART..
 console.log(newLib.changeToNumber("42")); //STRING NUMBER CONVERTED TO NUMBER..
 console.log(newLib.forMatNum(2.1)); //NUMBER USED TO CHANGE ITO A DECIMAL 2 PLACES 2.10
 
