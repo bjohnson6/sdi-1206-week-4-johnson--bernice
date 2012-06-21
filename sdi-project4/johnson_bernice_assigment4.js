@@ -19,7 +19,7 @@ var myLibrary = function(){
  //validatePhoneNum(100000000000); // number I used to verify number//returned false
  //finshed 1# ///////////////////////////////////////////////////////////////
 
-    //#2 Does a string follow an aaa@bbb.ccc pattern like an email address?
+   //#2 Does a string follow an aaa@bbb.ccc pattern like an email address?
    var validateEmailAddress = function (email){ // Funtion and string argument ..validate the email address
       var emailAddressPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; //email regEx code
     	  if(emailAddressPattern.test(email) === false) {
@@ -36,6 +36,14 @@ var myLibrary = function(){
 //SAVE TO TEST AGAIN ^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)$/;
 
 //FINISHED 2# /////////////////////////////////////////////////////////////
+    
+    //3# Is the string a URL? (Does it start with http: or https:?)
+    var validateUrl = function (startWith){
+    	
+      
+
+    }
+
   
 
 
