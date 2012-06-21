@@ -7,7 +7,7 @@
 var myLibrary = function(){
 
     //1# string
-    //Does a string follow a 123-456-7890 pattern like a phone number? //keep working on this
+    //Does a string follow a 123-456-7890 pattern like a phone number? 
    var validatePhoneNum = function(number){  // Function and  number argument ..validates the number 
       var phoneNumPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;  //the regEx code
         return phoneNumPattern.test(number); //returns true
@@ -32,7 +32,7 @@ var myLibrary = function(){
    };
     	 //used "bernicejohnson@fullsail.edu" to test returns: Your email address is valid. & true.
     	 //used "bernicejohnson@fullsail.e" to test returns : Your email address is not valid. & false.
-    
+         //SEE EMAIL REGEX VERIFICATION CODE EXPLANATION BELOW THE CONSOLE.LOGS AT THE BOTTOM OF THE PAGE
 //SAVE TO TEST AGAIN ^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)$/;
 
 //FINISHED 2# /////////////////////////////////////////////////////////////
@@ -92,13 +92,6 @@ var myLibrary = function(){
 //The substring() method extracts the characters from a string, between two specified indices, and returns the new sub string.
 
   
-
-
-
-
-
-
-
 
 
 
