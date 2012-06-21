@@ -77,6 +77,7 @@ var newLib = new myLibrary();
 console.log(newLib.validatePhoneNum(6102865545)); // NUMBER I USED TO VERIFY..returns true
 console.log(newLib.validateEmailAddress("bernicejohnson@fullsail.edu")); //EMAIL ADDRESS I USED TO VERIFY..
 console.log(newLib.validateUrl("http://fullsail.com")); //EMAIL TO VERIFY HTTP URL PART..
+console.log(newLib.validateUrl("https://httpsnow.org")); //EMAIL TO VERIFY THE HTTPS PART..
 
 
 
